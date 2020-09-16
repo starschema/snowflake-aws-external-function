@@ -1,13 +1,13 @@
 'use strict';
 
 module.exports.hello = async event => {
+  const body = JSON.parse(event.body);
+
   return {
     statusCode: 200,
     body: JSON.stringify(
       {
-        data: [
-          [0, 'hello from lambda']
-        ]
+        data: body.data.map((row) => [row[0], 'hello from lambda'])
       },
       null,
       2
