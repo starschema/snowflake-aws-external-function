@@ -21,9 +21,7 @@ service: snowflake-aws-nodejs # NOTE: update this with your service name
 # frameworkVersion: "=X.X.X"
 
 plugins:
-  localPath: '../'
-  modules:
-    - serverless-snowflake-external-function-plugin
+  - serverless-snowflake-external-function-plugin
 
 
 provider:
